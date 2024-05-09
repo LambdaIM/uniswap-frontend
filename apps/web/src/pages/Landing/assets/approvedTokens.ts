@@ -358,4 +358,13 @@ export const approvedERC721: InteractiveToken[] = [
     chain: Chain.Ethereum,
     standard: TokenStandard.ERC721,
   },
+  {
+    name: 'Lambda',
+    symbol: 'LAMBDA',
+    address: NATIVE_CHAIN_ID,
+    chain: Chain.Lambda,
+    standard: TokenStandard.ERC20,
+    color: '#e84140',
+    logoUrl: '',
+  },
 ]

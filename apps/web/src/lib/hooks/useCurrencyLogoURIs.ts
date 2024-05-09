@@ -8,7 +8,7 @@ import AvaxLogo from '../../assets/svg/avax_logo.svg'
 import BnbLogo from '../../assets/svg/bnb-logo.svg'
 import CeloLogo from '../../assets/svg/celo_logo.svg'
 import MaticLogo from '../../assets/svg/matic-token-icon.svg'
-import { NATIVE_CHAIN_ID, PORTAL_ETH_CELO, isCelo, nativeOnChain } from '../../constants/tokens'
+import { isCelo, NATIVE_CHAIN_ID, nativeOnChain, PORTAL_ETH_CELO } from '../../constants/tokens'
 
 type Network =
   | 'ethereum'
@@ -20,6 +20,7 @@ type Network =
   | 'avalanchec'
   | 'base'
   | 'blast'
+  | 'lambda'
 
 export function chainIdToNetworkName(networkId: ChainId): Network {
   switch (networkId) {
@@ -41,6 +42,8 @@ export function chainIdToNetworkName(networkId: ChainId): Network {
       return 'base'
     case ChainId.BLAST:
       return 'blast'
+    case ChainId.LAMBDA:
+      return 'lambda'
     default:
       return 'ethereum'
   }
@@ -75,6 +78,7 @@ export function getTokenLogoURI(address: string, chainId: ChainId = ChainId.MAIN
     ChainId.BLAST,
     ChainId.POLYGON,
     ChainId.CELO,
+    ChainId.LAMBDA,
   ]
   if (isCelo(chainId) && isSameAddress(address, nativeOnChain(chainId).wrapped.address)) {
     return CeloLogo

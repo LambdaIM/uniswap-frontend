@@ -19,6 +19,7 @@ import {
   DAI_OPTIMISM,
   DAI_POLYGON,
   ETH_BSC,
+  LAMBDA,
   OP,
   PORTAL_ETH_CELO,
   USDC_ARBITRUM,
@@ -36,6 +37,7 @@ import {
   USDT_ARBITRUM_ONE,
   USDT_AVALANCHE,
   USDT_BSC,
+  USDT_LAMBDA,
   USDT_OPTIMISM,
   USDT_POLYGON,
   WBTC,
@@ -160,6 +162,17 @@ export const COMMON_BASES: ChainCurrencyList = {
     USDC_AVALANCHE,
     USDT_AVALANCHE,
     WETH_AVALANCHE,
+  ].map(buildCurrencyInfo),
+  [ChainId.LAMBDA]: [
+    nativeOnChain(ChainId.LAMBDA),
+    LAMBDA,
+    USDT_LAMBDA,
+    WRAPPED_NATIVE_CURRENCY[ChainId.LAMBDA] as Token,
+  ].map(buildCurrencyInfo),
+  [ChainId.LAMBDA_HOLESKY]: [
+    nativeOnChain(ChainId.LAMBDA_HOLESKY),
+    LAMBDA,
+    WRAPPED_NATIVE_CURRENCY[ChainId.LAMBDA_HOLESKY] as Token,
   ].map(buildCurrencyInfo),
 }
 

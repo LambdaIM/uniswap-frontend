@@ -120,6 +120,16 @@ export default function RadialGradientByChainUpdater(): null {
         backgroundRadialGradientElement.style.background = darkMode ? baseDarkGradient : baseLightGradient
         break
       }
+      case ChainId.LAMBDA:
+      case ChainId.LAMBDA_HOLESKY: {
+        setBackground(backgroundResetStyles)
+        const lambdaLightGradient =
+          'radial-gradient(100% 100% at 50% 0%, rgba(255, 251, 242, 0) 0%, rgba(255, 244, 249, 0) 50.52%, rgba(255, 255, 255, 0) 100%), #FFFFFF'
+        const lambdaDarkGradient =
+          'radial-gradient(100% 100% at 50% 0%, rgba(62, 46, 56, 0) 0%, rgba(44, 31, 45, 0) 50.52%, rgba(31, 33, 40, 0) 100%), #0D0E0E'
+        backgroundRadialGradientElement.style.background = darkMode ? lambdaDarkGradient : lambdaLightGradient
+        break
+      }
       default: {
         setDefaultBackground(backgroundRadialGradientElement, darkMode)
       }

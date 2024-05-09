@@ -9,6 +9,7 @@ import {
   BNB_LOGO,
   ETHEREUM_LOGO,
   GOERLI_LOGO,
+  LAMBDA_LOGO,
   MUMBAI_LOGO,
   OPTIMISM_LOGO,
   POLYGON_LOGO,
@@ -36,6 +37,7 @@ export enum ChainId {
   PolygonMumbai = 80001,
   Blast = 81457,
   Bnb = 56,
+  Lambda = 56026,
 }
 
 export const ALL_SUPPORTED_CHAINS: string[] = Object.values(ChainId).map((c) => c.toString())
@@ -50,6 +52,7 @@ export const ALL_SUPPORTED_CHAIN_IDS: ChainId[] = [
   ChainId.Base,
   ChainId.Bnb,
   ChainId.Blast,
+  ChainId.Lambda,
 ]
 
 export const TESTNET_CHAIN_IDS = [ChainId.Goerli, ChainId.PolygonMumbai]
@@ -67,6 +70,7 @@ export const L2_CHAIN_IDS = [
   ChainId.PolygonMumbai,
   ChainId.Bnb,
   ChainId.Blast,
+  ChainId.Lambda,
 ] as const
 
 // Renamed from SupportedL2ChainId in web app
@@ -356,5 +360,34 @@ export const CHAIN_INFO: ChainInfo = {
       address: '0x4300000000000000000000000000000000000004',
     },
     rpcUrls: { [RPCType.Public]: 'https://rpc.blast.io' },
+  },
+  [ChainId.Lambda]: {
+    blockWaitMsBeforeWarning: 600000,
+    bridge: 'https://portal.lambda.im/bridge',
+    docs: 'https://docs.lambda.im/',
+    explorer: {
+      name: 'LambdaScan',
+      url: 'https://scan.lambda.im',
+      // TODO
+      logoLight: Logos.EtherscanLogoLight,
+      logoDark: Logos.EtherscanLogoDark,
+    },
+    infoLink: 'https://info.uniswap.org/#/lambda/',
+    label: 'Lambda',
+    logo: LAMBDA_LOGO,
+    nativeCurrency: {
+      name: 'Lambda ETH',
+      symbol: 'ETH',
+      decimals: 18,
+      address: DEFAULT_NATIVE_ADDRESS,
+    },
+    wrappedNativeCurrency: {
+      name: 'Wrapped ETH',
+      symbol: 'WETH',
+      decimals: 18,
+      address: '0x4200000000000000000000000000000000000006',
+    },
+    rpcUrls: { [RPCType.Public]: 'https://nrpc.lambda.im' },
+    statusPage: 'https://scan.lambda.im/stats',
   },
 }

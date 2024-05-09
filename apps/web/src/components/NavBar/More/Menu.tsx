@@ -5,14 +5,14 @@ import { Trans } from 'i18n'
 import { Socials } from 'pages/Landing/sections/Footer'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
-import { useOpenModal } from 'state/application/hooks'
-import { ApplicationModal } from 'state/application/reducer'
+// import { useOpenModal } from 'state/application/hooks'
+// import { ApplicationModal } from 'state/application/reducer'
 import styled, { css } from 'styled-components'
 import { BREAKPOINTS } from 'theme'
 import { ExternalLink, ThemedText } from 'theme/components'
 
 import { MenuItem, MenuSection, useMenuContent } from './menuContent'
-import { MobileAppLogo } from './MobileAppLogo'
+// import { MobileAppLogo } from './MobileAppLogo'
 
 const Container = styled.div`
   width: 295px;
@@ -31,7 +31,7 @@ const Container = styled.div`
   box-shadow: 0px 0px 10px 0px rgba(34, 34, 34, 0.04);
 
   position: absolute;
-  right: 0px;
+  left: 0px;
   top: 30px;
   bottom: unset;
   @media screen and (max-width: ${BREAKPOINTS.md}px) {
@@ -98,7 +98,7 @@ function Section({ title, items, closeMenu }: MenuSection) {
   )
 }
 export function Menu({ close }: { close: () => void }) {
-  const openGetTheAppModal = useOpenModal(ApplicationModal.GET_THE_APP)
+  // const openGetTheAppModal = useOpenModal(ApplicationModal.GET_THE_APP)
   const menuContent = useMenuContent()
 
   return (
@@ -116,22 +116,23 @@ export function Menu({ close }: { close: () => void }) {
         <StyledRow
           height="45px"
           gap="md"
-          onClick={() => {
-            close()
-            openGetTheAppModal()
-          }}
+          // onClick={() => {
+          //   close()
+          //   openGetTheAppModal()
+          // }}
         >
-          <MobileAppLogo />
+          {/*<MobileAppLogo />*/}
           <Column gap="xs">
             <Text lineHeight="20px">
-              <Trans>Download Uniswap</Trans>
+              {/*<Trans>Download Uniswap</Trans>*/}
+              <Trans>The DApp is a fork of Uniswap on Lambda Chain.</Trans>
             </Text>
-            <ThemedText.LabelSmall lineHeight="18px">
-              <Trans>Available on iOS and Android</Trans>
-            </ThemedText.LabelSmall>
+            {/*<ThemedText.LabelSmall lineHeight="18px">*/}
+            {/*  <Trans>Available on iOS and Android</Trans>*/}
+            {/*</ThemedText.LabelSmall>*/}
           </Column>
         </StyledRow>
-        <StyledSocials iconSize="25px" />
+        {/*<StyledSocials iconSize="25px" />*/}
       </Column>
     </Container>
   )

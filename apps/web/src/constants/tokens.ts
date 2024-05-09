@@ -269,6 +269,17 @@ export const MNW = new Token(
   'Morpheus.Network'
 )
 
+export const USDT_LAMBDA = new Token(
+  ChainId.LAMBDA,
+  // TODO
+  '0x4200000000000000000000000000000000000042',
+  6,
+  'USDT',
+  'Tether USD'
+)
+
+export const LAMBDA = new Token(ChainId.LAMBDA, '0x4200000000000000000000000000000000000042', 18, 'LAMBDA', 'Lambda')
+
 export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } = {
   ...(WETH9 as Record<ChainId, Token>),
   [ChainId.OPTIMISM]: new Token(
@@ -344,6 +355,20 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'Wrapped AVAX'
   ),
   [ChainId.BLAST]: new Token(ChainId.BLAST, '0x4300000000000000000000000000000000000004', 18, 'WETH', 'Wrapped Ether'),
+  [ChainId.LAMBDA]: new Token(
+    ChainId.LAMBDA,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.LAMBDA_HOLESKY]: new Token(
+    ChainId.LAMBDA_HOLESKY,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
 }
 
 export function isCelo(chainId: number): chainId is ChainId.CELO | ChainId.CELO_ALFAJORES {
@@ -510,6 +535,8 @@ const STABLECOINS: { [chainId in ChainId]: Token[] } = {
   [ChainId.ZORA]: [],
   [ChainId.ROOTSTOCK]: [],
   [ChainId.BLAST]: [USDB_BLAST],
+  [ChainId.LAMBDA]: [],
+  [ChainId.LAMBDA_HOLESKY]: [],
 }
 
 export function isStablecoin(currency?: Currency): boolean {
