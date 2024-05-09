@@ -30,4 +30,6 @@ export const RPC_PROVIDERS = {
   [ChainId.AVALANCHE]: getAppProvider(ChainId.AVALANCHE),
   [ChainId.BASE]: getAppProvider(ChainId.BASE),
   [ChainId.BLAST]: getAppProvider(ChainId.BLAST),
+  [ChainId.LAMBDA]: getAppProvider(ChainId.LAMBDA),
+  [ChainId.LAMBDA_HOLESKY]: getAppProvider(ChainId.LAMBDA_HOLESKY),
 } satisfies Record<SupportedInterfaceChain, AppJsonRpcProvider>

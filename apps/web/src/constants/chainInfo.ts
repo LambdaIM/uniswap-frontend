@@ -19,6 +19,8 @@ export function getBlocksPerMainnetEpochForChainId(chainId: number | undefined):
   switch (chainId) {
     case ChainId.ARBITRUM_ONE:
       return 46
+    case ChainId.LAMBDA:
+      return 6
     case ChainId.OPTIMISM:
       return 6
     case ChainId.POLYGON:
@@ -238,6 +240,26 @@ const CHAIN_INFO: ChainInfoMap = {
     explorer: 'https://blastscan.io/',
     infoLink: 'https://info.uniswap.org/#/blast/',
     label: 'Blast',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    color: darkTheme.chain_81457,
+  },
+  [ChainId.LAMBDA]: {
+    networkType: NetworkType.L2,
+    bridge: 'https://portal.lambda.im/bridge',
+    docs: 'https://docs.lambda.im',
+    explorer: 'https://scan.lambda.im',
+    infoLink: 'https://info.uniswap.org/#/lambda/',
+    label: 'Lambda',
+    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    color: darkTheme.chain_81457,
+  },
+  [ChainId.LAMBDA_HOLESKY]: {
+    networkType: NetworkType.L2,
+    bridge: 'https://portal.lambda.im/bridge',
+    docs: 'https://docs.lambda.im',
+    explorer: 'https://testscan.lambda.im',
+    infoLink: 'https://info.uniswap.org/#/lambda/',
+    label: 'Lambda Holesky',
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
     color: darkTheme.chain_81457,
   },

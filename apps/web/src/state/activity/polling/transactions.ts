@@ -46,6 +46,8 @@ const RETRY_OPTIONS_BY_CHAIN_ID: { [chainId: number]: RetryOptions } = {
   [ChainId.OPTIMISM_GOERLI]: { n: 10, minWait: 250, maxWait: 1000 },
   [ChainId.BASE]: { n: 10, minWait: 250, maxWait: 1000 },
   [ChainId.BLAST]: { n: 10, minWait: 250, maxWait: 1000 },
+  [ChainId.LAMBDA]: { n: 10, minWait: 250, maxWait: 1000 },
+  [ChainId.LAMBDA_HOLESKY]: { n: 10, minWait: 250, maxWait: 1000 },
 }
 const DEFAULT_RETRY_OPTIONS: RetryOptions = { n: 1, minWait: 0, maxWait: 0 }
 

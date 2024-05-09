@@ -1,5 +1,5 @@
-import { ChainId } from '@uniswap/sdk-core'
-import { Chain } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks'
+import {ChainId} from '@uniswap/sdk-core'
+import {Chain} from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks'
 
 export function toGraphQLChain(chainId: ChainId | number): Chain | undefined {
   switch (chainId) {
@@ -33,6 +33,9 @@ export function toGraphQLChain(chainId: ChainId | number): Chain | undefined {
       return Chain.Celo
     case ChainId.BLAST:
       return Chain.Blast
+    case ChainId.LAMBDA:
+    case ChainId.LAMBDA_HOLESKY:
+      return Chain.Lambda
   }
   return undefined
 }

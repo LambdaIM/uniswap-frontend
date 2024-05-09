@@ -24,6 +24,8 @@ const CLIENT_SIDE_ROUTING_ALLOW_LIST = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
+  ChainId.LAMBDA,
+  ChainId.LAMBDA_HOLESKY,
 ]
 const routers = new Map<ChainId, AlphaRouter>()
 export function getRouter(chainId: ChainId): AlphaRouter {

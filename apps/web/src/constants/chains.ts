@@ -16,6 +16,8 @@ export const CHAIN_IDS_TO_NAMES = {
   [ChainId.AVALANCHE]: 'avalanche',
   [ChainId.BASE]: 'base',
   [ChainId.BLAST]: 'blast',
+  [ChainId.LAMBDA]: 'lambda',
+  [ChainId.LAMBDA_HOLESKY]: 'lambda_holesky',
 } as const
 
 // Include ChainIds in this array if they are not supported by the UX yet, but are already in the SDK.
@@ -70,6 +72,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   ChainId.AVALANCHE,
   ChainId.BASE,
   ChainId.BLAST,
+  ChainId.LAMBDA,
 ] as const
 
 /**
@@ -85,6 +88,7 @@ export const TESTNET_CHAIN_IDS = [
   ChainId.ARBITRUM_GOERLI,
   ChainId.OPTIMISM_GOERLI,
   ChainId.CELO_ALFAJORES,
+  ChainId.LAMBDA_HOLESKY,
 ] as const
 
 /**
@@ -115,6 +119,7 @@ export const L2_CHAIN_IDS = [
   ChainId.OPTIMISM_GOERLI,
   ChainId.BASE,
   ChainId.BLAST,
+  ChainId.LAMBDA,
 ] as const
 
 export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number]
@@ -150,6 +155,9 @@ export function getChainPriority(chainId: ChainId): number {
       return 7
     case ChainId.BLAST:
       return 8
+    case ChainId.LAMBDA:
+    case ChainId.LAMBDA_HOLESKY:
+      return 9
     default:
       return Infinity
   }

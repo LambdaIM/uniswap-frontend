@@ -14,6 +14,7 @@ import { ReactComponent as bnb } from './ChainSymbols/bnb.svg'
 import { ReactComponent as celo } from './ChainSymbols/celo.svg'
 import { ReactComponent as celoLight } from './ChainSymbols/celo_light.svg'
 import { ReactComponent as ethereum } from './ChainSymbols/ethereum.svg'
+import { ReactComponent as lambda } from './ChainSymbols/lambda.svg'
 import { ReactComponent as optimism } from './ChainSymbols/optimism.svg'
 import { ReactComponent as polygon } from './ChainSymbols/polygon.svg'
 
@@ -95,6 +96,13 @@ export function getChainUI(chainId: ChainId, darkMode: boolean): ChainUI | undef
             bgColor: 'rgba(252, 252, 3, 0.16)',
             textColor: 'rgba(17, 20, 12, 1)',
           }
+    case ChainId.LAMBDA:
+    case ChainId.LAMBDA_HOLESKY:
+      return {
+        Symbol: lambda,
+        bgColor: '#6B8AFF33',
+        textColor: '#6B8AFF',
+      }
     default:
       return undefined
   }

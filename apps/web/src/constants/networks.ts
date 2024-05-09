@@ -132,6 +132,14 @@ export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
     'https://blastl2-mainnet.public.blastapi.io',
     'https://blast.blockpi.network/v1/rpc/public',
   ],
+  [ChainId.LAMBDA]: [
+    // "Safe" URLs
+    'https://nrpc.lambda.im',
+  ],
+  [ChainId.LAMBDA_HOLESKY]: [
+    // "Safe" URLs
+    'https://testnrpc.lambda.im',
+  ],
 }
 
 /**
@@ -154,6 +162,8 @@ export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.BLAST]: [`https://blast-mainnet.infura.io/v3/${INFURA_KEY}`],
+  [ChainId.LAMBDA]: [`https://nrpc.lambda.im`],
+  [ChainId.LAMBDA_HOLESKY]: [`https://testnrpc.lambda.im`],
 }
 
 export const INFURA_PREFIX_TO_CHAIN_ID: { [prefix: string]: ChainId } = {
@@ -168,4 +178,6 @@ export const INFURA_PREFIX_TO_CHAIN_ID: { [prefix: string]: ChainId } = {
   'polygon-mumbai': ChainId.POLYGON_MUMBAI,
   'avalanche-mainnet': ChainId.AVALANCHE,
   'base-mainnet': ChainId.BASE,
+  'lambda-mainnet': ChainId.LAMBDA,
+  'lambda-holesky': ChainId.LAMBDA_HOLESKY,
 }

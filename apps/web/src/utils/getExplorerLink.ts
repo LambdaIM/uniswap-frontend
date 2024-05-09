@@ -16,6 +16,8 @@ const BLOCK_EXPLORER_PREFIXES: { [chainId: number]: string } = {
   [ChainId.AVALANCHE]: 'https://snowtrace.io',
   [ChainId.BASE]: 'https://basescan.org',
   [ChainId.BLAST]: 'https://blastscan.io',
+  [ChainId.LAMBDA]: 'https://scan.lambda.im',
+  [ChainId.LAMBDA_HOLESKY]: 'https://testscan.lambda.im',
 }
 
 export enum ExplorerDataType {

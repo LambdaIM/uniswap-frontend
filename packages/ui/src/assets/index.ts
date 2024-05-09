@@ -66,3 +66,5 @@ export const SECURITY_SCREEN_BACKGROUND_LIGHT = {
 }
 
 export const DEAD_LUNI = require('./graphics/dead-luni.png')
+
+export const LAMBDA_LOGO = require('./logos/png/lambda-logo.png')
