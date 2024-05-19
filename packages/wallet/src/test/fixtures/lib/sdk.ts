@@ -106,6 +106,15 @@ export const WBTC = new Token(
   'Wrapped BTC'
 )
 
+export const USDC_LAMBDA = new Token(
+  ChainId.Lambda,
+  // TODO
+  '0x026C48C2976EF967ad92439C20389fFE5110A043',
+  6,
+  'USDC',
+  'USDC Bridged'
+)
+
 export const SDK_TOKENS = [
   ETH,
   WETH,
@@ -119,4 +128,5 @@ export const SDK_TOKENS = [
   USDT,
   USDT_BNB,
   WBTC,
+  USDC_LAMBDA,
 ]

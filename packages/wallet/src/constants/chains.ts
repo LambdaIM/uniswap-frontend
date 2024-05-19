@@ -372,7 +372,8 @@ export const CHAIN_INFO: ChainInfo = {
       logoLight: Logos.EtherscanLogoLight,
       logoDark: Logos.EtherscanLogoDark,
     },
-    infoLink: 'https://info.uniswap.org/#/lambda/',
+    // TODO
+    infoLink: '',
     label: 'Lambda',
     logo: LAMBDA_LOGO,
     nativeCurrency: {

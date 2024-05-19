@@ -18,7 +18,7 @@ import styled from 'styled-components'
 
 import { useAccountDrawer } from 'components/AccountDrawer/MiniPortfolio/hooks'
 import { Z_INDEX } from 'theme/zIndex'
-import { Chain } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks'
+// import { Chain } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks'
 import { useIsNavSearchInputVisible } from '../../nft/hooks/useIsNavSearchInputVisible'
 import { Bag } from './Bag'
 import Blur from './Blur'
@@ -71,12 +71,13 @@ export const PageTabs = () => {
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
         <Trans>Swap</Trans>
       </MenuItem>
-      {/*<MenuItem*/}
-      {/*  href={'/explore' + (chainName !== Chain.Ethereum ? `/${chainName.toLowerCase()}` : '')}*/}
-      {/*  isActive={pathname.startsWith('/explore')}*/}
-      {/*>*/}
-      {/*  <Trans>Explore</Trans>*/}
-      {/*</MenuItem>*/}
+      <MenuItem
+        // href={'/explore' + (chainName !== Chain.Ethereum ? `/${chainName.toLowerCase()}` : '')}
+        // isActive={pathname.startsWith('/explore')}
+        href={'https://v3info.swap.lambda.im'}
+      >
+        <Trans>Explore</Trans>
+      </MenuItem>
       {/*{!shouldDisableNFTRoutes && (*/}
       {/*  <MenuItem dataTestId="nft-nav" href="/nfts" isActive={isNftPage}>*/}
       {/*    <Trans>NFTs</Trans>*/}

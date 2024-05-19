@@ -1,14 +1,14 @@
 query RecentTokenTransfers($address: String!) {
   portfolios(
     ownerAddresses: [$address]
-    chains: [ETHEREUM, POLYGON, ARBITRUM, OPTIMISM, BASE, BNB]
+    chains: [ETHEREUM, POLYGON, ARBITRUM, OPTIMISM, BASE, BNB, LAMBDA]
   ) {
     id
     ownerAddress
     assetActivities(
       pageSize: 100
       page: 1
-      chains: [ETHEREUM, POLYGON, ARBITRUM, OPTIMISM, BASE, BNB]
+      chains: [ETHEREUM, POLYGON, ARBITRUM, OPTIMISM, BASE, BNB, LAMBDA]
     ) {
       id
       timestamp

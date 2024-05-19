@@ -97,6 +97,14 @@ export const UNI = {
   [ChainId.Goerli]: new Token(ChainId.Goerli, UNI_ADDRESS[ChainId.Goerli], 18, 'UNI', 'Uniswap'),
 }
 
+export const USDC_LAMBDA = new Token(
+  ChainId.Lambda,
+  '0x026C48C2976EF967ad92439C20389fFE5110A043',
+  6,
+  'USDC',
+  'USDC Bridged'
+)
+
 export function wrappedNativeCurrency(chainId: ChainId): Token {
   const wrappedCurrencyInfo = CHAIN_INFO[chainId].wrappedNativeCurrency
   return new Token(

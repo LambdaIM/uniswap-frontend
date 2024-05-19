@@ -13,6 +13,7 @@ export const GQL_CHAINS = [
   Chain.Polygon,
   Chain.Base,
   Chain.Bnb,
+  Chain.Lambda,
 ]
 
 export const image = createFixture<Image>()(() => ({

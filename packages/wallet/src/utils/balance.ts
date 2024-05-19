@@ -29,6 +29,8 @@ export const MIN_BNB_FOR_GAS: JSBI = MIN_ARBITRUM_FOR_GAS
 
 export const MIN_BLAST_FOR_GAS: JSBI = MIN_ARBITRUM_FOR_GAS
 
+export const MIN_LAMBDA_FOR_GAS: JSBI = MIN_ARBITRUM_FOR_GAS
+
 /**
  * Given some token amount, return the max that can be spent of it
  * https://github.com/Uniswap/interface/blob/main/src/utils/maxAmountSpend.ts
@@ -66,6 +68,9 @@ export function maxAmountSpend(
       break
     case ChainId.Blast:
       minAmount = MIN_BLAST_FOR_GAS
+      break
+    case ChainId.Lambda:
+      minAmount = MIN_LAMBDA_FOR_GAS
       break
     default:
       return undefined

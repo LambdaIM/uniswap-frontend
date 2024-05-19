@@ -16,7 +16,13 @@ const NETWORK_ICON_SIZE = iconSizes.icon20
 const NETWORK_ICON_SHIFT = 8
 // Array of logos to show when "all networks" are visible. Don't want to show all
 // logos because there are too many
-const NETWORK_LOGOS_TO_SHOW = [ChainId.Mainnet, ChainId.ArbitrumOne, ChainId.Optimism, ChainId.Base]
+const NETWORK_LOGOS_TO_SHOW = [
+  ChainId.Mainnet,
+  ChainId.ArbitrumOne,
+  ChainId.Optimism,
+  ChainId.Base,
+  ChainId.Lambda,
+]
 
 interface NetworkFilterProps {
   selectedChain: ChainId | null

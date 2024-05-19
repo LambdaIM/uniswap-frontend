@@ -248,7 +248,7 @@ const CHAIN_INFO: ChainInfoMap = {
     bridge: 'https://portal.lambda.im/bridge',
     docs: 'https://docs.lambda.im',
     explorer: 'https://scan.lambda.im',
-    infoLink: 'https://info.uniswap.org/#/lambda/',
+    infoLink: 'https://v3info.swap.lambda.im',
     label: 'Lambda',
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
     color: darkTheme.chain_81457,
@@ -258,7 +258,7 @@ const CHAIN_INFO: ChainInfoMap = {
     bridge: 'https://portal.lambda.im/bridge',
     docs: 'https://docs.lambda.im',
     explorer: 'https://testscan.lambda.im',
-    infoLink: 'https://info.uniswap.org/#/lambda/',
+    infoLink: 'https://v3info.swap.lambda.im',
     label: 'Lambda Holesky',
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
     color: darkTheme.chain_81457,
@@ -303,7 +303,7 @@ export function getChainInfo(
   return undefined
 }
 
-const MAINNET_INFO = CHAIN_INFO[ChainId.MAINNET]
+const MAINNET_INFO = CHAIN_INFO[ChainId.LAMBDA]
 export function getChainInfoOrDefault(chainId: number | undefined, featureFlags?: Record<number, boolean>) {
   return getChainInfo(chainId, featureFlags) ?? MAINNET_INFO
 }

@@ -236,6 +236,16 @@ export const approvedERC20: InteractiveToken[] = [
     chain: Chain.Ethereum,
     standard: TokenStandard.ERC20,
   },
+  {
+    name: 'Lambda',
+    symbol: 'LAMBDA',
+    color: '#0852F1FF',
+    logoUrl:
+      'https://raw.githubusercontent.com/LambdaIM/assets/master/blockchains/lambda/assets/0x99344442308EDb5Ee0b6cca5e54D1355679357Fa/logo.png',
+    address: '0x99344442308EDb5Ee0b6cca5e54D1355679357Fa',
+    chain: Chain.Lambda,
+    standard: TokenStandard.ERC20,
+  },
 ]
 
 export const approvedERC721: InteractiveToken[] = [
@@ -357,14 +367,5 @@ export const approvedERC721: InteractiveToken[] = [
     address: '0xf528e3381372c43f5e8a55b3e6c252e32f1a26e4',
     chain: Chain.Ethereum,
     standard: TokenStandard.ERC721,
-  },
-  {
-    name: 'Lambda',
-    symbol: 'LAMBDA',
-    address: NATIVE_CHAIN_ID,
-    chain: Chain.Lambda,
-    standard: TokenStandard.ERC20,
-    color: '#e84140',
-    logoUrl: '',
   },
 ]

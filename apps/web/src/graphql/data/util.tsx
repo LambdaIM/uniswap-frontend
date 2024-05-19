@@ -155,6 +155,7 @@ const URL_CHAIN_PARAM_TO_BACKEND: { [key: string]: InterfaceGqlChain } = {
   avalanche: Chain.Avalanche,
   base: Chain.Base,
   blast: Chain.Blast,
+  lambda: Chain.Lambda,
 }
 
 /**
@@ -236,6 +237,7 @@ export const BACKEND_SUPPORTED_CHAINS = [
   Chain.Bnb,
   Chain.Celo,
   Chain.Blast,
+  Chain.Lambda,
 ] as const
 export const BACKEND_NOT_YET_SUPPORTED_CHAIN_IDS = [ChainId.AVALANCHE] as const
 

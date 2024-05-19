@@ -1,14 +1,8 @@
-import { BigNumber, BigNumberish } from 'ethers'
-import {
-  ALL_SUPPORTED_CHAINS,
-  ChainId,
-  L2ChainId,
-  L2_CHAIN_IDS,
-  TESTNET_CHAIN_IDS,
-} from 'wallet/src/constants/chains'
-import { PollingInterval } from 'wallet/src/constants/misc'
+import {BigNumber, BigNumberish} from 'ethers'
+import {ALL_SUPPORTED_CHAINS, ChainId, L2_CHAIN_IDS, L2ChainId, TESTNET_CHAIN_IDS,} from 'wallet/src/constants/chains'
+import {PollingInterval} from 'wallet/src/constants/misc'
 
-import { Chain } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks'
+import {Chain} from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks'
 
 // Some code from the web app uses chainId types as numbers
 // This validates them as coerces into SupportedChainId
@@ -52,6 +46,8 @@ export function fromGraphQLChain(chain: Chain | undefined): ChainId | null {
       return ChainId.Bnb
     case Chain.Blast:
       return ChainId.Blast
+    case Chain.Lambda:
+      return ChainId.Lambda
   }
 
   return null
@@ -76,6 +72,8 @@ export function fromMoonpayNetwork(moonpayNetwork: string | undefined): ChainId 
       return ChainId.Bnb
     case Chain.Base.toLowerCase():
       return ChainId.Base
+    case Chain.Lambda.toLowerCase():
+      return ChainId.Lambda
     case undefined:
       return ChainId.Mainnet
     default:
@@ -99,6 +97,8 @@ export function fromUniswapWebAppLink(network: string | null): ChainId | null {
       return ChainId.Bnb
     case Chain.Blast.toLowerCase():
       return ChainId.Blast
+    case Chain.Lambda.toLowerCase():
+      return ChainId.Lambda
     default:
       throw new Error(`Network "${network}" can not be mapped`)
   }
@@ -120,6 +120,8 @@ export function toUniswapWebAppLink(chainId: ChainId): string | null {
       return Chain.Bnb.toLowerCase()
     case ChainId.Blast:
       return Chain.Blast.toLowerCase()
+    case ChainId.Lambda:
+      return Chain.Lambda.toLowerCase()
     default:
       throw new Error(`ChainID "${chainId}" can not be mapped`)
   }

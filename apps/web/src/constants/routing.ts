@@ -28,6 +28,7 @@ import {
   USDC_BASE,
   USDC_BSC,
   USDC_CELO,
+  USDC_LAMBDA,
   USDC_MAINNET,
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
@@ -37,7 +38,6 @@ import {
   USDT_ARBITRUM_ONE,
   USDT_AVALANCHE,
   USDT_BSC,
-  USDT_LAMBDA,
   USDT_OPTIMISM,
   USDT_POLYGON,
   WBTC,
@@ -166,7 +166,7 @@ export const COMMON_BASES: ChainCurrencyList = {
   [ChainId.LAMBDA]: [
     nativeOnChain(ChainId.LAMBDA),
     LAMBDA,
-    USDT_LAMBDA,
+    USDC_LAMBDA,
     WRAPPED_NATIVE_CURRENCY[ChainId.LAMBDA] as Token,
   ].map(buildCurrencyInfo),
   [ChainId.LAMBDA_HOLESKY]: [

@@ -7,7 +7,7 @@ import {
   USDBC_BASE,
   USDC,
   USDC_ARBITRUM,
-  USDC_GOERLI,
+  USDC_GOERLI, USDC_LAMBDA,
   USDC_OPTIMISM,
   USDC_POLYGON,
   USDT_BNB,
@@ -26,6 +26,7 @@ export const STABLECOIN_AMOUNT_OUT: { [chainId: number]: CurrencyAmount<Token> }
   [ChainId.Polygon]: CurrencyAmount.fromRawAmount(USDC_POLYGON, 10_000e6),
   [ChainId.Optimism]: CurrencyAmount.fromRawAmount(USDC_OPTIMISM, 10_000e6),
   [ChainId.Blast]: CurrencyAmount.fromRawAmount(USDB, 10_000e18),
+  [ChainId.Lambda]: CurrencyAmount.fromRawAmount(USDC_LAMBDA, 10_000e6),
 }
 
 /**

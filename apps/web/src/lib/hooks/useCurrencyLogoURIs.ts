@@ -88,7 +88,7 @@ export function getTokenLogoURI(address: string, chainId: ChainId = ChainId.MAIN
   }
 
   if (networksWithUrls.includes(chainId)) {
-    return `https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
+    return `https://raw.githubusercontent.com/LambdaIM/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
   }
 }
 

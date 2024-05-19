@@ -269,16 +269,15 @@ export const MNW = new Token(
   'Morpheus.Network'
 )
 
-export const USDT_LAMBDA = new Token(
+export const USDC_LAMBDA = new Token(
   ChainId.LAMBDA,
-  // TODO
-  '0x4200000000000000000000000000000000000042',
+  '0x026C48C2976EF967ad92439C20389fFE5110A043',
   6,
-  'USDT',
-  'Tether USD'
+  'USDC',
+  'USDC Bridged'
 )
 
-export const LAMBDA = new Token(ChainId.LAMBDA, '0x4200000000000000000000000000000000000042', 18, 'LAMBDA', 'Lambda')
+export const LAMBDA = new Token(ChainId.LAMBDA, '0x99344442308EDb5Ee0b6cca5e54D1355679357Fa', 18, 'LAMBDA', 'Lambda')
 
 export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } = {
   ...(WETH9 as Record<ChainId, Token>),
@@ -475,6 +474,7 @@ class ExtendedEther extends NativeCurrency {
 }
 
 const cachedNativeCurrency: { [chainId: number]: NativeCurrency | Token } = {}
+
 export function nativeOnChain(chainId: number): NativeCurrency | Token {
   if (cachedNativeCurrency[chainId]) return cachedNativeCurrency[chainId]
   let nativeCurrency: NativeCurrency | Token
